@@ -1,0 +1,120 @@
+body{
+	min-height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+$colors: (
+    'app-1': rgba(56, 145, 166, 1),
+    'app-2': rgba(76, 91, 92, 1),
+    'app-3': #fde74c,
+    'app-4': rgba(219, 84, 97, 1),
+    'app-5': rgba(227, 101, 91, 1),
+    'app-6': #9381ff,
+);
+
+@for $i from 1 through length($colors){
+	$color : nth($colors, $i);
+	
+	[data-bg-color="-app-color-#{$i}"]{
+		background-color: #{nth($color,2)};
+	}
+}
+
+.container{
+	margin:0 auto;
+	max-width:768px;
+	width:100%;
+	position:relative;
+	justify-content:center;
+	display:flex;
+}
+
+.o-apps{
+	display:flex;
+	margin-bottom:-30px;
+	width:390px;
+	flex-wrap:wrap;
+	transform:scale(1);
+	transition: transform .3s ease-in-out;
+	
+	> *{
+		margin:0 15px 30px;
+	}
+	
+	.-app-open &{
+		transform:scale(.8);
+	}
+}
+
+.c-app__holder{
+	display:none;
+}
+
+.c-app__tile{
+	width:100px;
+	height:100px;
+	cursor:pointer;
+	border-radius:4px;
+}
+
+.c-app-container{
+	visibility:hidden;
+	overflow:hidden;
+	position:fixed;
+	top:0;
+	left:0;
+	transform-origin:top left;
+	width:100%;
+	min-height:100vh;
+	/*
+	&__content{
+		background:red;
+		min-height:100vh;
+		transition:opacity .15s linear 0s;
+		
+		.-app-open &{
+			opacity:1;
+		}
+	}
+	*/
+	
+	
+	&__inner{
+		color:#fff;
+		padding:50px;
+		opacity:0;
+		transition:opacity .15s linear 0s;
+		
+		.-app-open &{
+			opacity:1;
+			transition:opacity .15s linear 0.15s;
+		}
+	}
+	
+	&__header{
+		display:flex;
+		justify-content:space-between;
+		padding:24px 0;
+	}
+	
+	&__dismiss{
+		font-size:24px;
+		
+		> * {
+			 pointer-events: none;
+		}
+		
+	}
+	
+	.-app-open &{
+		visibility:visible;
+		transition: transform .3s ease-in-out 0s, visibility 0s linear 0s;
+	}
+	
+	.-app-close &{
+		visibility:hidden;
+		transition: transform .3s ease-in-out 0s, visibility 0s linear .3s;
+	}
+}
