@@ -11,5 +11,4 @@ The aim of this project is to allow users who won't get the update to feel what 
 ![Screenshot 2025-01-02 164636](https://github.com/user-attachments/assets/5f34ad89-7826-427b-96eb-7ee926d8b71a)
 ![Uploading Screenshot 2025-01-02 124147.png…]()
 ![Screenshot 2025-01-01 003606](https://github.com/user-attachments/assets/50ac9d29-c273-44d4-8dec-cd44f07e3451)
-![Screenshot 2025-01-17 140133](https://github.com/user-attachments/assets/b69af1b3-3c3a-4a15-96b3-b52702a8f52b)
 ![Screenshot 2025-01-06 172042](https://github.com/user-attachments/assets/0de7e8b0-debb-49e4-811b-36b7e35a937d)
