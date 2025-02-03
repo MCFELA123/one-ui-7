@@ -3,6 +3,8 @@ import { AppView_Module, Icon, InputBar, Item, Span, ObjectModule, PageView, Tex
 import BatteryGauge from "react-battery-gauge";
 import { useBattery } from 'react-use';
 
+import AppSettings from '../../Apps/com.settings/app-settings';
+
 import file_icon from '../../Apps/icon pack/files.png'
 import contact_icon from '../../Apps/icon pack/contacts.png'
 import store_icon from '../../Apps/icon pack/galaxy-store.png'
@@ -315,7 +317,7 @@ const battery = useBattery();
       <Text className='app-name'>Calendar</Text>
       </ObjectModule>
 
-      <ObjectModule style={{marginLeft:'8%'}} display={'grid'} justify={'center'} align={'end'}>
+      <ObjectModule style={{marginLeft:'11%'}} display={'grid'} justify={'center'} align={'end'}>
       <AppView_Module className={'fsm com_app'}>
         <Icon src={wallet_icon} width={50}/>
       </AppView_Module>
@@ -338,9 +340,10 @@ const battery = useBattery();
       <Text className='app-name'>Contacts</Text>
       </ObjectModule>
 
-      <ObjectModule display={'grid'} justify={'center'} align={'end'}>
+      <ObjectModule display={'grid'} justify={'center'} align={'end'} className='app_com'>
       <AppView_Module className={'fsm com_app'}>
-        <Icon src={settings_icon} width={50}/>
+      <AppSettings/>
+      <Icon src={settings_icon} className='com_app_icon' position={'absolute'} size={3.55}/>
       </AppView_Module>
       <Text className='app-name'>Settings</Text>
       </ObjectModule>

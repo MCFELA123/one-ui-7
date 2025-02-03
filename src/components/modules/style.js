@@ -125,7 +125,7 @@ export const Meter = styled.div`
 
 export const Text = styled.text`
     position:${(props) => props.position};
-    font-size:${(props) => props.size}em;
+    font-size:${(props) => props.size}em !important;
     opacity:${(props) => props.opacity};
     scale:${(props) => props.scale};
     color: ${(props) => props.color};
@@ -362,7 +362,7 @@ export const App_Page = styled.div`
 export const App_Page_More = styled.div`
     width: 100%;
     height: 100%;
-    background: #ffffff15;
+    background: #ffffff10;
     transition: .5s filter linear;
     -webkit-transition: 1s -webkit-filter linear;
 -moz-transition: 1s -moz-filter linear;
@@ -406,10 +406,11 @@ export const AppView_Module = styled.div`
   overflow: hidden;
 	justify-content: center;
 	align-items: center;
+
 	flex-direction: column;
 	color: #f5f5f5;
   transition: all .7s cubic-bezier(0.16, 1, 0.29, 0.99) 0s, background 0s ease 0s;
-	cursor: pointer;
+	// cursor: unset;
 	&.growing {
 		h1.modal-content {
 			height: auto;
@@ -468,11 +469,54 @@ export const Component = styled.div`
     background-size: cover;
     background-image: url(${(props) => props.wallpaper});
     display: ${(props) => props.display};
+    cursor: ${(props) => props.cursor};
     align-items: ${(props) => props.align};
     justify-content: ${(props) => props.justify};
     width:${(props) => props.size}%;
     height:${(props) => props.height}em;
     position:${(props) => props.position};
+    margin:${(props) => props.margin};
+    margin-top:${(props) => props.mt}em;
+    overflow:${(props) => props.overflow};
+    float:${(props) => props.float};
+    margin-left:${(props) => props.ml}em;
+    margin-right:${(props) => props.mr}em;
+    box-shadow:${(props) => props.shadow};
+    outline:${(props) => props.outline};
+    border:${(props) => props.border};
+    background:${(props) => props.background} !important;
+    border-radius: ${(props) => props.radius}em;
+    backdrop-filter: blur(${(props) => props.blur}em);
+    -webkit-backdrop-filter: blur(${(props) => props.blur}em);
+    padding-top:${(props) => props.py}em;
+    padding-bottom:${(props) => props.py}em;
+    padding-left:${(props) => props.px}em;
+    padding-right:${(props) => props.px}em;
+    z-index:${(props) => props.zIndex};
+    background-position: center;
+    background-size: cover;
+    position:${(props) => props.position};
+    opacity:${(props) => props.opacity};
+    top:${(props) => props.top}em;
+    bottom:${(props) => props.bottom}em;
+    scale:${(props) => props.scale};
+    left:${(props) => props.botom}em;
+    left:${(props) => props.left}em;
+    right:${(props) => props.right}em;
+    background-image: url(${(props) => props.bgImg});
+    text-align:${(props) => props.textAlign};
+`
+
+export const Panel = styled.div`
+    background-position: center;
+    background-size: cover;
+    background-image: url(${(props) => props.wallpaper});
+    display: ${(props) => props.display};
+    align-items: ${(props) => props.align};
+    justify-content: ${(props) => props.justify};
+    width: 100%;
+    height: 100%;
+    position: absolute;
     margin:${(props) => props.margin};
     margin-top:${(props) => props.mt}em;
     overflow:${(props) => props.overflow};

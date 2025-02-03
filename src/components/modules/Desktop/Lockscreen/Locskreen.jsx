@@ -99,12 +99,12 @@ export const Locskreen = () => {
 
     <Component size={50} className='d-justify-start'>
     <Button size={2.8} height={2.8} background={'#ffffff40'} blur={.5} duration={.2} cursor={'pointer'} border={'none'} radius={2}>
-        <Icon  src={call_module_icon}/>
+        <Icon src={call_module_icon}/>
     </Button>
     </Component>
     <Component size={50} className='d-justify-end'>
     <Button size={2.8} height={2.8} background={'#ffffff40'} blur={.5} duration={.2} cursor={'pointer'} border={'none'} radius={2}>
-        <Icon  src={camera_module_icon} scale={1.3}/>
+        <Icon src={camera_module_icon} scale={1.3}/>
     </Button>
     </Component>
         </Component>

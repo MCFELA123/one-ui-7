@@ -35,6 +35,15 @@ body,html {
   src: url(../src/components/modules/fonts/SF-Pro-Rounded-Semibold.otf);
 }
 
+@font-face {
+  font-family: fontLight;
+  src: url(../src/components/modules/fonts/SF-Pro-Rounded-Light.otf);
+}
+
+.light {
+  font-family: fontLight;
+}
+
 .normal {
   font-family: fontNormal;
 }
@@ -340,6 +349,10 @@ body {
   transform: translateY(-4px) translateX(7px);
 }
 
+.ms00-player-img {
+  background-image: url(./components/modules/Apps/img/player/ms00.jpg) !important
+}
+
 .blue-gradient-bg {
   background: linear-gradient(#62b3ff, #3079bd) !important;
   /* box-shadow: 0 2px 5px 0 #3180ffa9; */
@@ -354,6 +367,19 @@ body {
   border-radius: 5em;
 }
 
+.rippler {
+  border-radius: 1.5em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.ripplers {
+  /* border-radius: 1.5em; */
+  width: 100%;
+  cursor: pointer;
+  /* background: #ddeeff25; */
+}
+
 .app-name {
   /* transform: translateX(2%); */
   margin: 0 auto;
@@ -362,8 +388,38 @@ body {
   font-size: small;
 }
 
+.seeker-light-blue-theme {
+  background: #bae0ff;
+}
+
+.seeker-light-blue-theme .seeker-thumb {
+  background: #f0f8ff;
+  box-shadow: 0 0 10px 0 #3d4f5ea8;
+}
+
 .weather-widget {
   border-radius: 2em;
+}
+
+.quick-panel {
+  height: 90% !important;
+  transition: all .6s cubic-bezier(0.16, 1, 0.29, 1.2) 0s, background 0s ease 0s !important;
+  /* transform: translateY(-3em); */
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.pan-full {
+  transition: all .6s cubic-bezier(0.16, 1, 0.29, 1.5) 0s, background 0s ease 0s !important;
+  transform: translateY(-3em);
+  /* scale: .95; */
+}
+
+.pan-animate {
+  transition: all .8s cubic-bezier(0.16, 1, 0.29, 1.5) 0s, background 0s ease 0s !important;
+  transform: translateY(-.5em);
+  scale: .8;
 }
 
 .d-cetner {
@@ -372,9 +428,21 @@ body {
   justify-content: center;
 }
 
+.com_app_block {
+  transition: all .3s ease;
+}
+
 h1 {
 	font-weight: 900;
 	text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.fsg .com_app_icon {
+  scale: 3 !important
 }
 
 .fsm:first-child {
@@ -463,4 +531,14 @@ img {
   background: #ffffffbc !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.com_span_bbt {
+  /* border-bottom: 2px solid #ffffff15; */
+  padding-bottom: 0;
+}
+
+.com_span_bbt_last {
+  border-bottom: none #e36e00;
+  padding-bottom: 0em;
 }

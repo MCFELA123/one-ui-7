@@ -1,4 +1,38 @@
+import '../src/swiped-events.min.js'
+
 window.onload = ()=> {
+    const app_com = document.querySelectorAll('.app_com')
+    const com_app_block = document.querySelector('.com_app_block')
+
+    app_com.forEach(element => {
+        element.addEventListener('click', () => {
+
+           com_app_block.style.opacity=0
+           com_app_block.style.visibility='hidden'
+            })
+    });
+
+    const quickPanelToggle = document.querySelector('.quick-toggle')
+    const quickPanel = document.querySelector('.quick-panel')
+    const panAnimate = document.querySelectorAll('.pan-animate')
+    
+    quickPanelToggle.addEventListener('swiped-down', function() {
+        quickPanel.setAttribute('style', 'opacity: 1;visibility:visible;height:100% !important;transform:translateY(0)')
+        panAnimate.forEach(element => {
+            element.setAttribute('style', 'scale:1;transform:translateY(0)')
+            document.querySelector('.pan-full').setAttribute('style', 'transform:translateY(0)')
+        });
+});
+
+quickPanel.addEventListener('swiped-up', function() {
+    quickPanel.setAttribute('style', 'opacity: 0;visibility:hidden;height:90% !important;')
+    panAnimate.forEach(element => {
+        element.setAttribute('style', 'scale:.8;transform:translateY(-.5em)')
+        document.querySelector('.pan-full').setAttribute('style', 'transform:translateY(-3em)')
+    });
+});
+
+
     const lockscreen = document.querySelector('.lockscreen')
     const lockscreen_actions = document.querySelectorAll('.lockscreen-actions')
     const status = document.querySelector('.status-bar')
@@ -39,7 +73,6 @@ document.querySelector('.rest').addEventListener('mouseenter', (event)=> {
                 document.querySelector('.rest').style.transition = '.3s'
         document.querySelector('.rest').style.top = `${clientY}px`
 })
-
 
 }
 
